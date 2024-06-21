@@ -1,0 +1,20 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: jwt-resource
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jwt_sso
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  type-aliases-package: com.dpb.domain
+  mapper-locations: classpath:mapper/*.xml
+logging:
+  level:
+    com.dpb: debug
+rsa:
+  key:
+    pubKeyFile: F:\code\boot-security-jwt\auth_key\id_key_rsa.pub
